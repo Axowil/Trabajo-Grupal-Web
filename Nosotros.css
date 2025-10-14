@@ -1,6 +1,5 @@
 
 
-*::before,
 *::after { box-sizing: border-box; }
 
 html, body { height: 100%; margin: 0; padding: 0; }
@@ -8,72 +7,7 @@ html, body { height: 100%; margin: 0; padding: 0; }
 body { overflow-x: hidden; } 
 img { display: block; max-width: 100%; height: auto; } 
 
-.contact-form {
-max-width: 500px;
-margin: 2rem auto;
-padding: 2rem;
-border: 1px solid #ccc;
-border-radius: 10px;
-background-color: #f9f9f9;
-box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-box-sizing: border-box;
-}
 
-.form-fieldset {
-border: none;
-padding: 0;
-}
-
-.form-legend {
-text-align: center;
-font-size: 1.8rem;
-font-weight: bold;
-margin-bottom: 1.5rem;
-width: 100%;
-}
-
-.contact-form {
-    margin: 0;
-    padding: 2rem;
-    border-radius: 10px;
-    /* Fondo semitransparente para mejor lectura */
-    background-color: rgba(255, 255, 255, 0.9);
-    box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
-    box-sizing: border-box;
-    /* Color de texto oscuro para contraste */
-    color: #333;
-}
-
-.contact-form input[type="text"],
-.contact-form input[type="email"],
-.contact-form input[type="tel"],
-.contact-form input[type="date"],
-.contact-form input[type="number"],
-.contact-form select {
-width: 100%;
-padding: 0.8rem;
-margin-bottom: 1rem;
-border: 1px solid #ddd;
-border-radius: 5px;
-box-sizing: border-box;
-}
-
-.submit-btn {
-width: 100%;
-padding: 1rem;
-background-color: #007bff;
-color: white;
-font-weight: bold;
-border: none;
-border-radius: 5px;
-cursor: pointer;
-font-size: 1rem;
-}
-
-.submit-btn:hover {
-background-color: #0056b3;
-}
-/* Estilos del Navbar con temática de fútbol (colores renovados) */
 .navbar {
     background: linear-gradient(135deg, #38b000 0%, #70e000 100%); /* Verde más claro y llamativo */
     padding: 12px 0;
@@ -138,14 +72,14 @@ background-color: #0056b3;
     left: 50%;
     width: 0;
     height: 2px;
-    background-color: #ffffff; /* Subrayado blanco para mejor contraste */
+    background-color: #ffffff;
     transition: all 0.3s ease;
     transform: translateX(-50%);
 }
 
 .navbar-menu li a:hover {
     color: #ffffff;
-    background-color: rgba(0, 0, 0, 0.15); /* Fondo oscuro sutil al pasar el mouse */
+    background-color: rgba(0, 0, 0, 0.15); 
 }
 
 .navbar-menu li a:hover::after {
@@ -230,23 +164,4 @@ background-color: #0056b3;
         padding: 6px 12px;
         font-size: 12px;
     }
-}
-.hero-section {
-    background-image: url('https://user-gen-media-assets.s3.amazonaws.com/gemini_images/c66654c3-630a-40b6-b98e-3f11d6420b1f.png');
-    height: 100vh;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-attachment: fixed;
-    position: relative;
-    display: flex;
-    justify-content: center;
-    align-items: center;    
-}
-.hero-text-container {
-    width: 100%;
-    max-width: 500px; 
-    padding: 0 20px; 
-    position: relative;
-    z-index: 1;
 }
