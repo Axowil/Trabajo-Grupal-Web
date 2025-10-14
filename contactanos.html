@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    
+    <link rel="stylesheet" href="contactoStyle.css">
+<body>
+    <nav class="navbar">
+        <div class="navbar-container">
+            <div class="navbar-logo">
+                <a href="#">
+                    <img src="/Imagenes/futbol.webp" alt="Logo Fútbol" class="logo-img">
+                </a>
+            </div>
+            <ul class="navbar-menu">
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="contactanos.html">Contacto</a></li>
+                <li><a href="sobreNosotros.html">Sobre Nosotros</a></li>
+            </ul>
+            <div class="navbar-buttons">
+                <a href="#login" class="btn-login">Iniciar Sesión</a>
+                <a href="#registro" class="btn-registro">Registrarse</a>
+            </div>
+        </div>
+    </nav>
+    <div class="hero-section">
+    <div class="hero-overlay"></div>
+    <div class="hero-text-container">
+        <form action="/formulario" method="POST" class="contact-form">
+    <fieldset class="form-fieldset">
+        <legend class="form-legend">contactanos</legend>
+
+        <label for="nombres">Nombres:</label>
+        <input type="text" id="nombres" name="nombres" required>
+
+        <label for="apellidos">Apellidos:</label>
+        <input type="text" id="apellidos" name="apellidos" required>
+
+        <label for="correo">Correo Electrónico:</label>
+        <input type="email" id="correo" name="correo" required>
+
+        <label for="telefono">Teléfono:</label>
+        <input type="tel" id="telefono" name="telefono" required>
+
+        <label for="cancha">Seleccionar cancha:</label>
+        <select id="cancha" name="cancha" required>
+            <option value="" disabled selected>Seleccione una cancha</option>
+            <option value="El Coloso Club">El Coloso Club</option>
+            <option value="V.CFRANCISCO'S CLUB">V.CFRANCISCO'S CLUB</option>
+            <option value="Cancha Sintética San Siro">Cancha Sintética "San Siro"</option>
+            <option value="JARAWA SPORT S.A.C.">JARAWA SPORT S.A.C.</option>
+        </select>
+
+        <label for="fecha">Fecha:</label>
+        <input type="date" id="fecha" name="fecha" required>
+
+        <label for="personas">Número de personas:</label>
+        <input type="number" id="personas" name="personas" min="1" required>
+
+        <input type="submit" value="Enviar" class="submit-btn">
+    </fieldset>
+</form>
+
+    </div>
+</div>
+</body>
+</html>

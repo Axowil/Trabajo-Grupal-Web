@@ -259,3 +259,180 @@ html {
         font-size: 1rem;
     }
 }
+/* --- Estilos para la Sección de Canchas Disponibles --- */
+
+.canchas-section {
+    padding: 60px 20px;
+    background-color: #ffffff; /* Un fondo muy claro para la sección */
+}
+
+.section-title {
+    text-align: center;
+    font-size: 2.5rem;
+    color: #38b000; /* Color verde principal */
+    margin-bottom: 40px;
+    font-weight: 700;
+}
+
+.canchas-grid-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    background-color: #ffffff;
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+}
+
+.canchas-grid {
+    display: grid;
+    /* Crea columnas automáticas que se ajustan al tamaño */
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 25px; /* Espacio entre las tarjetas */
+}
+
+.cancha-card {
+    background-color: #ffffff;
+    border-radius: 10px;
+    overflow: hidden; /* Asegura que la imagen respete los bordes redondeados */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    text-decoration: none;
+    color: #333;
+    display: flex;
+    flex-direction: column;
+}
+
+.cancha-card:hover {
+    transform: translateY(-8px); /* Efecto de levitación al pasar el mouse */
+    box-shadow: 0 12px 25px rgba(0, 0, 0, 0.15);
+}
+
+.cancha-card img {
+    width: 100%;
+    height: 180px; /* Altura fija para las imágenes */
+    object-fit: cover; /* Asegura que la imagen cubra el espacio sin deformarse */
+}
+
+.cancha-info {
+    padding: 15px;
+    text-align: center;
+    font-weight: 600;
+}
+
+/* --- Ajustes Responsive para la sección de canchas --- */
+
+@media screen and (max-width: 768px) {
+    .section-title {
+        font-size: 2rem;
+    }
+    
+    .canchas-grid-container {
+        padding: 20px;
+    }
+}
+/* --- Estilos para la Sección de Contacto --- */
+
+.contact-section {
+    padding: 80px 20px;
+    background-color: #1a1a1a; /* Mismo fondo oscuro para consistencia */
+}
+
+.contact-container {
+    max-width: 800px;
+    margin: 0 auto;
+    background-color: #262626; /* Tarjeta principal un poco más clara */
+    padding: 40px;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+    text-align: center;
+}
+
+/* El título y subtítulo se adaptan del estilo global, pero ajustamos el subtítulo */
+.section-subtitle {
+    color: #b0b0b0;
+    margin-top: -30px;
+    margin-bottom: 40px;
+    font-size: 1.1rem;
+}
+
+.contact-form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    text-align: left;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+}
+
+.form-group label {
+    color: #ffffff;
+    font-weight: 600;
+    margin-bottom: 8px;
+    font-size: 1rem;
+}
+
+/* Estilos comunes para inputs, select y textarea */
+.contact-form input,
+.contact-form select,
+.contact-form textarea {
+    width: 100%;
+    padding: 12px 15px;
+    border: 2px solid #555;
+    background-color: #333;
+    color: #ffffff;
+    border-radius: 8px;
+    font-size: 1rem;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.contact-form input::placeholder,
+.contact-form textarea::placeholder {
+    color: #888;
+}
+
+/* Efecto al seleccionar un campo */
+.contact-form input:focus,
+.contact-form select:focus,
+.contact-form textarea:focus {
+    outline: none;
+    border-color: #38b000; /* Borde verde al enfocar */
+    box-shadow: 0 0 10px rgba(56, 176, 0, 0.4);
+}
+
+.contact-form select {
+    /* Apariencia para que no se vea como un input de texto */
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    background-image: url('data:image/svg+xml;charset=US-ASCII,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20width%3D%22292.4%22%20height%3D%22292.4%22%3E%3Cpath%20fill%3D%22%23FFFFFF%22%20d%3D%22M287%2069.4a17.6%2017.6%200%200%200-13-5.4H18.4c-5%200-9.3%201.8-12.9%205.4A17.6%2017.6%200%200%200%200%2082.2c0%205%201.8%209.3%205.4%2012.9l128%20127.9c3.6%203.6%207.8%205.4%2012.8%205.4s9.2-1.8%2012.8-5.4L287%2095c3.5-3.5%205.4-7.8%205.4-12.8%200-5-1.9-9.2-5.5-12.8z%22/%3E%3C/svg%3E');
+    background-repeat: no-repeat;
+    background-position: right 15px top 50%;
+    background-size: .65em auto;
+}
+
+.contact-form textarea {
+    resize: vertical; /* Permite al usuario ajustar la altura */
+    min-height: 120px;
+}
+
+.btn-submit {
+    padding: 15px;
+    border: none;
+    border-radius: 25px;
+    background: linear-gradient(135deg, #38b000 0%, #70e000 100%);
+    color: #ffffff;
+    font-size: 1.1rem;
+    font-weight: 700;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.btn-submit:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 20px rgba(56, 176, 0, 0.4);
+}
