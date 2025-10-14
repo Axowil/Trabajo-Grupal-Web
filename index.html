@@ -1,131 +1,39 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Portal de Registro - Fútbol</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <header>
-        <nav>
-            <ul>
-                <li>
-                    <a href="registrarse.html">Registrarse</a>
-                </li>
-                <li>
-                    <a href="metodos.html">Metodos de pago</a>
-                </li>
+    <!-- Navbar con temática de fútbol -->
+    <nav class="navbar">
+        <div class="navbar-container">
+            <div class="navbar-logo">
+                <a href="#">
+                    <img src="/Imagenes/futbol.webp" alt="Logo Fútbol" class="logo-img">
+                </a>
+            </div>
+            <ul class="navbar-menu">
+                <li><a href="#inicio">Inicio</a></li>
+                <li><a href="#servicios">Ligas</a></li>
+                <li><a href="#contacto">Equipos</a></li>
+                <li><a href="#estadisticas">Estadísticas</a></li>
             </ul>
-        </nav>
-    </header>
-    <body>
-    <section>
-    <h2>Horarios Disponibles de Canchas</h2>
-    <div id="tabla">
-        <table border="1" cellpadding="10" cellspacing="0" width="80%">
-            <thead>
-                <tr>
-                    <th>Cancha</th>
-                    <th>Día de la Semana</th>
-                    <th>Horarios Disponibles</th>
-                </tr>
-            </thead>
-            <tbody>
-                
-                <tr>
-                    <td rowspan="7"><strong>Cancha 1<br>(Fútbol 7)</strong></td>
-                    <td><strong>Lunes</strong></td>
-                    <td>07:00 - 08:00 - 09:00 - 10:00 - 14:00 - 15:00 - 16:00 - 17:00 - 18:00 - 19:00 - 20:00 - 21:00 - 22:00</td>
-                </tr>
-                <tr>
-                    <td><strong>Martes</strong></td>
-                    <td>07:00 - 08:00 - 09:00 - 10:00 - 14:00 - 15:00 - 16:00 - 17:00 - 18:00 - 19:00 - 20:00 - 21:00 - 22:00</td>
-                </tr>
-                <tr>
-                    <td><strong>Miércoles</strong></td>
-                    <td>07:00 - 08:00 - 09:00 - 10:00 - 14:00 - 15:00 - 16:00 - 17:00 - 18:00 - 19:00 - 20:00 - 21:00 - 22:00</td>
-                </tr>
-                <tr>
-                    <td><strong>Jueves</strong></td>
-                    <td>07:00 - 08:00 - 09:00 - 10:00 - 14:00 - 15:00 - 16:00 - 17:00 - 18:00 - 19:00 - 20:00 - 21:00 - 22:00</td>
-                </tr>
-                <tr>
-                    <td><strong>Viernes</strong></td>
-                    <td>07:00 - 08:00 - 09:00 - 10:00 - 14:00 - 15:00 - 16:00 - 17:00 - 18:00 - 19:00 - 20:00 - 21:00 - 22:00 - 23:00</td>
-                </tr>
-                <tr>
-                    <td><strong>Sábado</strong></td>
-                    <td>08:00 - 09:00 - 10:00 - 11:00 - 12:00 - 13:00 - 14:00 - 15:00 - 16:00 - 17:00 - 18:00 - 19:00 - 20:00 - 21:00 - 22:00 - 23:00</td>
-                </tr>
-                <tr>
-                    <td><strong>Domingo</strong></td>
-                    <td>08:00 - 09:00 - 10:00 - 11:00 - 12:00 - 13:00 - 14:00 - 15:00 - 16:00 - 17:00 - 18:00 - 19:00 - 20:00 - 21:00 - 22:00</td>
-                </tr>
+            <div class="navbar-buttons">
+                <a href="#login" class="btn-login">Iniciar Sesión</a>
+                <a href="#registro" class="btn-registro">Registrarse</a>
+            </div>
+        </div>
+    </nav>
 
-                
-                <tr>
-                    <td rowspan="7"><strong>Cancha 2<br>(Fútbol 5)</strong></td>
-                    <td><strong>Lunes</strong></td>
-                    <td>06:00 - 07:00 - 08:00 - 09:00 - 10:00 - 11:00 - 15:00 - 16:00 - 17:00 - 18:00 - 19:00 - 20:00 - 21:00 - 22:00</td>
-                </tr>
-                <tr>
-                    <td><strong>Martes</strong></td>
-                    <td>06:00 - 07:00 - 08:00 - 09:00 - 10:00 - 11:00 - 15:00 - 16:00 - 17:00 - 18:00 - 19:00 - 20:00 - 21:00 - 22:00</td>
-                </tr>
-                <tr>
-                    <td><strong>Miércoles</strong></td>
-                    <td>06:00 - 07:00 - 08:00 - 09:00 - 10:00 - 11:00 - 15:00 - 16:00 - 17:00 - 18:00 - 19:00 - 20:00 - 21:00 - 22:00</td>
-                </tr>
-                <tr>
-                    <td><strong>Jueves</strong></td>
-                    <td>06:00 - 07:00 - 08:00 - 09:00 - 10:00 - 11:00 - 15:00 - 16:00 - 17:00 - 18:00 - 19:00 - 20:00 - 21:00 - 22:00</td>
-                </tr>
-                <tr>
-                    <td><strong>Viernes</strong></td>
-                    <td>06:00 - 07:00 - 08:00 - 09:00 - 10:00 - 11:00 - 15:00 - 16:00 - 17:00 - 18:00 - 19:00 - 20:00 - 21:00 - 22:00 - 23:00</td>
-                </tr>
-                <tr>
-                    <td><strong>Sábado</strong></td>
-                    <td>07:00 - 08:00 - 09:00 - 10:00 - 11:00 - 12:00 - 13:00 - 14:00 - 15:00 - 16:00 - 17:00 - 18:00 - 19:00 - 20:00 - 21:00 - 22:00 - 23:00</td>
-                </tr>
-                <tr>
-                    <td><strong>Domingo</strong></td>
-                    <td>07:00 - 08:00 - 09:00 - 10:00 - 11:00 - 12:00 - 13:00 - 14:00 - 15:00 - 16:00 - 17:00 - 18:00 - 19:00 - 20:00 - 21:00 - 22:00</td>
-                </tr>
-
-                
-                <tr>
-                    <td rowspan="7"><strong>Cancha 3<br>(Vóley)</strong></td>
-                    <td><strong>Lunes</strong></td>
-                    <td>08:00 - 09:00 - 10:00 - 11:00 - 16:00 - 17:00 - 18:00 - 19:00 - 20:00 - 21:00</td>
-                </tr>
-                <tr>
-                    <td><strong>Martes</strong></td>
-                    <td>08:00 - 09:00 - 10:00 - 11:00 - 16:00 - 17:00 - 18:00 - 19:00 - 20:00 - 21:00</td>
-                </tr>
-                <tr>
-                    <td><strong>Miércoles</strong></td>
-                    <td>08:00 - 09:00 - 10:00 - 11:00 - 16:00 - 17:00 - 18:00 - 19:00 - 20:00 - 21:00</td>
-                </tr>
-                <tr>
-                    <td><strong>Jueves</strong></td>
-                    <td>08:00 - 09:00 - 10:00 - 11:00 - 16:00 - 17:00 - 18:00 - 19:00 - 20:00 - 21:00</td>
-                </tr>
-                <tr>
-                    <td><strong>Viernes</strong></td>
-                    <td>08:00 - 09:00 - 10:00 - 11:00 - 16:00 - 17:00 - 18:00 - 19:00 - 20:00 - 21:00 - 22:00</td>
-                </tr>
-                <tr>
-                    <td><strong>Sábado</strong></td>
-                    <td>09:00 - 10:00 - 11:00 - 12:00 - 13:00 - 14:00 - 15:00 - 16:00 - 17:00 - 18:00 - 19:00 - 20:00 - 21:00 - 22:00</td>
-                </tr>
-                <tr>
-                    <td><strong>Domingo</strong></td>
-                    <td>09:00 - 10:00 - 11:00 - 12:00 - 13:00 - 14:00 - 15:00 - 16:00 - 17:00 - 18:00 - 19:00 - 20:00 - 21:00</td>
-                </tr>
-            </tbody>
-        </table>
+<div class="hero-section">
+    <div class="hero-overlay"></div>
+    <div class="hero-text-container">
+        <h1>Encuentra tu cancha, reserva tu pasión.</h1>
+        <p>Tu próximo partido empieza aquí. Reserva ahora.</p>
     </div>
-</section>
+</div>
 </body>
 </html>
