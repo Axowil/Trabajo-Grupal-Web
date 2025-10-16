@@ -137,12 +137,13 @@ html {
 /* Sección Hero con imagen de fondo a pantalla completa */
 .hero-section {
     background-image: url('https://user-gen-media-assets.s3.amazonaws.com/gemini_images/00a18584-2a6d-46c8-bf99-5025d2e2db26.png');
-    height: 100vh;
+    min-height: 100vh; /* Cambiamos a min-height para permitir el padding */
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
     background-attachment: fixed;
     position: relative;
+    padding-top: 80px; /* Compensamos la altura del navbar fijo */
 }
 
 /* Overlay con degradado para mejor legibilidad (transparencia reducida) */
@@ -159,6 +160,7 @@ html {
         rgba(0, 0, 0, 0.1) 50%,
         rgba(56, 176, 0, 0.15) 100%
     );
+    z-index: 1; /* Asegura que esté detrás del texto pero encima de la imagen */
 }
 
 /* Media queries para diseño responsive (sin cambios) */
@@ -186,6 +188,10 @@ html {
         height: 40px;
         width: 40px;
     }
+
+    .hero-section {
+        padding-top: 70px; /* Ajustamos para móviles donde el navbar es más pequeño */
+    }
 }
 
 @media screen and (max-width: 480px) {
@@ -198,6 +204,10 @@ html {
         padding: 6px 12px;
         font-size: 12px;
     }
+
+    .hero-section {
+        padding-top: 60px; /* Ajustamos para pantallas muy pequeñas */
+    }
 }
 
 .hero-text-container {
@@ -205,10 +215,11 @@ html {
     top: 50%; 
     right: 0; 
     transform: translateY(-50%); 
-    padding: 0 5%; 
-    width: 50%; 
+    padding: 0 5% 0 2%; /* Reducimos padding izquierdo para evitar superposición */
+    width: 45%; /* Reducimos el ancho para dar más espacio */
     text-align: right; 
     color: #ffffff; 
+    z-index: 10; /* Asegura que esté por encima del overlay */
 }
 
 /* Estilo para el título principal (H1) */
@@ -230,7 +241,8 @@ html {
 
 @media screen and (max-width: 968px) {
     .hero-text-container {
-        width: 70%; 
+        width: 65%; /* Reducimos un poco para evitar superposición */
+        padding: 0 3% 0 2%;
     }
 
     .hero-text-container h1 {
@@ -249,6 +261,7 @@ html {
         text-align: center; 
         right: 50%; 
         transform: translate(50%, -50%); 
+        z-index: 10; /* Mantenemos z-index para móviles */
     }
 
     .hero-text-container h1 {
@@ -258,12 +271,18 @@ html {
     .hero-text-container p {
         font-size: 1rem;
     }
+
+    .canchas-section {
+        padding: 60px 20px 40px; /* Ajustamos padding para móviles */
+        margin-top: 10px;
+    }
 }
 /* --- Estilos para la Sección de Canchas Disponibles --- */
 
 .canchas-section {
-    padding: 60px 20px;
+    padding: 80px 20px 60px; /* Aumentamos padding superior para más separación */
     background-color: #ffffff; /* Un fondo muy claro para la sección */
+    margin-top: 20px; /* Margen adicional para asegurar separación */
 }
 
 .section-title {
@@ -320,6 +339,14 @@ html {
 }
 
 /* --- Ajustes Responsive para la sección de canchas --- */
+
+/* Media query para pantallas grandes */
+@media screen and (min-width: 1200px) {
+    .hero-text-container {
+        width: 40%; /* Reducimos aún más en pantallas grandes */
+        padding: 0 4% 0 1%;
+    }
+}
 
 @media screen and (max-width: 768px) {
     .section-title {
@@ -436,3 +463,282 @@ html {
     transform: translateY(-3px);
     box-shadow: 0 8px 20px rgba(56, 176, 0, 0.4);
 }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #f5f5f5;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+        }
+
+        /* Estilos del Footer */
+        .footer {
+            background: linear-gradient(135deg, #1a1a1a 0%, #2d2d2d 100%);
+            color: #ffffff;
+            padding: 50px 20px 20px;
+            margin-top: auto;
+            box-shadow: 0 -5px 20px rgba(0, 0, 0, 0.3);
+        }
+
+        .footer-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: 2fr 1fr 1fr 1fr;
+            gap: 40px;
+        }
+
+        /* Sección de Información Principal */
+        .footer-info {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+
+        .footer-logo {
+            font-size: 28px;
+            font-weight: bold;
+            color: #4CAF50;
+            margin-bottom: 10px;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+        }
+
+        .footer-description {
+            font-size: 16px;
+            line-height: 1.6;
+            color: #cccccc;
+            max-width: 350px;
+        }
+
+        /* Sección de Enlaces Rápidos */
+        .footer-section h3 {
+            font-size: 20px;
+            margin-bottom: 20px;
+            color: #4CAF50;
+            position: relative;
+        }
+
+        .footer-section h3::after {
+            content: '';
+            position: absolute;
+            bottom: -5px;
+            left: 0;
+            width: 30px;
+            height: 3px;
+            background: #4CAF50;
+            border-radius: 2px;
+        }
+
+        .footer-links {
+            list-style: none;
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+        }
+
+        .footer-links li a {
+            color: #cccccc;
+            text-decoration: none;
+            font-size: 16px;
+            transition: all 0.3s ease;
+            position: relative;
+            padding-left: 20px;
+        }
+
+        .footer-links li a::before {
+            content: '→';
+            position: absolute;
+            left: 0;
+            color: #4CAF50;
+            transition: transform 0.3s ease;
+        }
+
+        .footer-links li a:hover {
+            color: #4CAF50;
+            transform: translateX(5px);
+        }
+
+        .footer-links li a:hover::before {
+            transform: translateX(3px);
+        }
+
+        /* Sección de Redes Sociales */
+        .social-links {
+            display: flex;
+            gap: 15px;
+            margin-top: 10px;
+        }
+
+        .social-link {
+            width: 45px;
+            height: 45px;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-decoration: none;
+            color: #ffffff;
+            font-size: 20px;
+            transition: all 0.3s ease;
+            border: 2px solid transparent;
+        }
+
+        .social-link:hover {
+            background: #4CAF50;
+            transform: translateY(-3px);
+            box-shadow: 0 5px 15px rgba(76, 175, 80, 0.4);
+            border-color: #4CAF50;
+        }
+
+        .social-link.facebook:hover {
+            background: #1877f2;
+            border-color: #1877f2;
+            box-shadow: 0 5px 15px rgba(24, 119, 242, 0.4);
+        }
+
+        .social-link.instagram:hover {
+            background: linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%);
+            border-color: #bc1888;
+            box-shadow: 0 5px 15px rgba(188, 24, 136, 0.4);
+        }
+
+        .social-link.twitter:hover {
+            background: #1da1f2;
+            border-color: #1da1f2;
+            box-shadow: 0 5px 15px rgba(29, 161, 242, 0.4);
+        }
+
+        /* Sección de Contacto */
+        .contact-info {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+        }
+
+        .contact-item {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            color: #cccccc;
+            font-size: 16px;
+            transition: color 0.3s ease;
+        }
+
+        .contact-item:hover {
+            color: #4CAF50;
+        }
+
+        .contact-icon {
+            width: 20px;
+            height: 20px;
+            color: #4CAF50;
+        }
+
+        /* Línea de Copyright */
+        .footer-bottom {
+            border-top: 1px solid #333333;
+            margin-top: 40px;
+            padding-top: 20px;
+            text-align: center;
+            color: #999999;
+            font-size: 14px;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 1024px) {
+            .footer-container {
+                grid-template-columns: 1fr 1fr;
+                gap: 30px;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .footer {
+                padding: 40px 20px 20px;
+            }
+
+            .footer-container {
+                grid-template-columns: 1fr;
+                gap: 30px;
+                text-align: center;
+            }
+
+            .footer-description {
+                max-width: 100%;
+            }
+
+            .social-links {
+                justify-content: center;
+            }
+
+            .footer-links li a {
+                padding-left: 0;
+            }
+
+            .footer-links li a::before {
+                display: none;
+            }
+
+            .footer-logo {
+                font-size: 24px;
+            }
+
+            .footer-section h3 {
+                font-size: 18px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .footer {
+                padding: 30px 15px 15px;
+            }
+
+            .footer-container {
+                gap: 25px;
+            }
+
+            .social-link {
+                width: 40px;
+                height: 40px;
+                font-size: 18px;
+            }
+
+            .contact-item {
+                font-size: 14px;
+            }
+
+            .footer-description {
+                font-size: 14px;
+            }
+        }
+
+        /* Animación de entrada */
+        .footer {
+            animation: slideUp 0.8s ease-out;
+        }
+
+        @keyframes slideUp {
+            from {
+                opacity: 0;
+                transform: translateY(50px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        /* Efecto de brillo en hover para el logo */
+        .footer-logo:hover {
+            text-shadow: 0 0 10px rgba(76, 175, 80, 0.5);
+            transition: text-shadow 0.3s ease;
+        }
+    
