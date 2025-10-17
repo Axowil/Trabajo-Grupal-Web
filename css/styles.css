@@ -15,7 +15,7 @@ html {
 }
 
 /* Estilos del Navbar con temática de fútbol */
-.navbar {
+.navbar {   
     background: linear-gradient(135deg, #38b000 0%, #70e000 100%); 
     padding: 12px 0;
     position: fixed;
