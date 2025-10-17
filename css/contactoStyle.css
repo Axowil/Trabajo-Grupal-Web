@@ -1,0 +1,252 @@
+
+
+*::before,
+*::after { box-sizing: border-box; }
+
+html, body { height: 100%; margin: 0; padding: 0; }
+
+body { overflow-x: hidden; } 
+img { display: block; max-width: 100%; height: auto; } 
+
+.contact-form {
+max-width: 500px;
+margin: 2rem auto;
+padding: 2rem;
+border: 1px solid #ccc;
+border-radius: 10px;
+background-color: #f9f9f9;
+box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+box-sizing: border-box;
+}
+
+.form-fieldset {
+border: none;
+padding: 0;
+}
+
+.form-legend {
+text-align: center;
+font-size: 1.8rem;
+font-weight: bold;
+margin-bottom: 1.5rem;
+width: 100%;
+}
+
+.contact-form {
+    margin: 0;
+    padding: 2rem;
+    border-radius: 10px;
+    /* Fondo semitransparente para mejor lectura */
+    background-color: rgba(255, 255, 255, 0.9);
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+    box-sizing: border-box;
+    /* Color de texto oscuro para contraste */
+    color: #333;
+}
+
+.contact-form input[type="text"],
+.contact-form input[type="email"],
+.contact-form input[type="tel"],
+.contact-form input[type="date"],
+.contact-form input[type="number"],
+.contact-form select {
+width: 100%;
+padding: 0.8rem;
+margin-bottom: 1rem;
+border: 1px solid #ddd;
+border-radius: 5px;
+box-sizing: border-box;
+}
+
+.submit-btn {
+width: 100%;
+padding: 1rem;
+background-color: #007bff;
+color: white;
+font-weight: bold;
+border: none;
+border-radius: 5px;
+cursor: pointer;
+font-size: 1rem;
+}
+
+.submit-btn:hover {
+background-color: #0056b3;
+}
+/* Estilos del Navbar con temática de fútbol (colores renovados) */
+.navbar {
+    background: linear-gradient(135deg, #38b000 0%, #70e000 100%); /* Verde más claro y llamativo */
+    padding: 12px 0;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+    border-bottom: 3px solid #9ef01a; /* Borde más brillante */
+}
+
+.navbar-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+}
+
+/* Logo con imagen de pelota */
+.navbar-logo a {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    transition: transform 0.3s ease;
+}
+
+.navbar-logo a:hover {
+    transform: scale(1.1) rotate(15deg);
+}
+
+.logo-img {
+    height: 50px;
+    width: 50px;
+    object-fit: contain;
+    filter: drop-shadow(0 2px 5px rgba(0, 0, 0, 0.3));
+}
+
+/* Menú de navegación */
+.navbar-menu {
+    display: flex;
+    list-style: none;
+    gap: 25px;
+}
+
+.navbar-menu li a {
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    padding: 8px 15px;
+    border-radius: 5px;
+    position: relative;
+}
+
+.navbar-menu li a::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    width: 0;
+    height: 2px;
+    background-color: #ffffff; /* Subrayado blanco para mejor contraste */
+    transition: all 0.3s ease;
+    transform: translateX(-50%);
+}
+
+.navbar-menu li a:hover {
+    color: #ffffff;
+    background-color: rgba(0, 0, 0, 0.15); /* Fondo oscuro sutil al pasar el mouse */
+}
+
+.navbar-menu li a:hover::after {
+    width: 80%;
+}
+
+/* Botones de acción (colores renovados) */
+.navbar-buttons {
+    display: flex;
+    gap: 15px;
+}
+
+.btn-login {
+    color: #ffffff;
+    text-decoration: none;
+    padding: 10px 22px;
+    border: 2px solid #ffffff; /* Borde blanco */
+    border-radius: 25px;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    background-color: transparent;
+}
+
+.btn-login:hover {
+    background-color: #ffffff;
+    color: #38b000; /* Color de texto verde al pasar el mouse */
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(255, 255, 255, 0.4);
+}
+
+.btn-registro {
+    color: #38b000; /* Texto verde */
+    text-decoration: none;
+    padding: 10px 22px;
+    background: #ffffff; /* Fondo blanco */
+    border: 2px solid #ffffff;
+    border-radius: 25px;
+    font-weight: 600;
+    transition: all 0.3s ease;
+}
+
+.btn-registro:hover {
+    background: linear-gradient(135deg, #f0f0f0 0%, #e9e9e9 100%); /* Ligero gradiente gris al pasar */
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(255, 255, 255, 0.5);
+}
+
+/* Media queries para diseño responsive del navbar */
+@media screen and (max-width: 968px) {
+    .navbar-menu {
+        display: none;
+    }
+    
+    .navbar-container {
+        justify-content: space-between;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .navbar-buttons {
+        gap: 10px;
+    }
+    
+    .btn-login, .btn-registro {
+        padding: 8px 16px;
+        font-size: 14px;
+    }
+    
+    .logo-img {
+        height: 40px;
+        width: 40px;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .navbar-buttons {
+        flex-direction: column;
+        gap: 8px;
+    }
+    
+    .btn-login, .btn-registro {
+        padding: 6px 12px;
+        font-size: 12px;
+    }
+}
+.hero-section {
+    background-image: url('https://user-gen-media-assets.s3.amazonaws.com/gemini_images/c66654c3-630a-40b6-b98e-3f11d6420b1f.png');
+    height: 100vh;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;    
+}
+.hero-text-container {
+    width: 100%;
+    max-width: 500px; 
+    padding: 0 20px; 
+    position: relative;
+    z-index: 1;
+}
