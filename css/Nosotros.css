@@ -9,7 +9,7 @@ img { display: block; max-width: 100%; height: auto; }
 
 
 .navbar {
-    background: linear-gradient(135deg, #38b000 0%, #70e000 100%); /* Verde más claro y llamativo */
+    background-color: #22c55e;
     padding: 12px 0;
     position: fixed;
     width: 100%;

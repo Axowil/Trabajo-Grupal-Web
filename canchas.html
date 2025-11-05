@@ -1,0 +1,372 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nuestras Canchas</title>
+    <link rel="stylesheet" href="css/canchas.css">
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="navbar">
+        <div class="navbar-container">
+            <div class="navbar-logo">
+                <a href="index.html">
+                    <img src="Imagenes/futbol.webp" alt="Logo Fútbol" class="logo-img">
+                </a>
+            </div>
+            <ul class="navbar-menu">
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="canchas.html">Canchas</a></li>
+                <li><a href="contactanos.html">Contacto</a></li>
+                <li><a href="sobreNosotros.html">Sobre Nosotros</a></li>
+            </ul>
+            <div class="navbar-buttons">
+                <a href="#login" class="btn-login">Iniciar Sesión</a>
+                <a href="#registro" class="btn-registro">Registrarse</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Sección Principal -->
+    <section class="canchas-section">
+        <div class="canchas-container">
+            <h1>Nuestras Canchas Disponibles</h1>
+            <p class="parrafo">Encuentra la cancha perfecta para tu próximo partido</p>
+
+            <!-- Filtros -->
+            <div class="filtros-container">
+                <div class="filtro">
+                    <label for="ubicacion">Ubicación:</label>
+                    <select id="ubicacion" onchange="filtrarCanchas()">
+                        <option value="">Todas las ubicaciones</option>
+                        <option value="norte">Zona Norte</option>
+                        <option value="centro">Zona Centro</option>
+                        <option value="sur">Zona Sur</option>
+                        <option value="este">Zona Este</option>
+                        <option value="oeste">Zona Oeste</option>
+                    </select>
+                </div>
+
+                <div class="filtro">
+                    <label for="superficie">Superficie:</label>
+                    <select id="superficie" onchange="filtrarCanchas()">
+                        <option value="">Todas las superficies</option>
+                        <option value="cesped">Césped Natural</option>
+                        <option value="sintetico">Césped Sintético</option>
+                        <option value="asfalto">Asfalto</option>
+                    </select>
+                </div>
+
+                <div class="filtro">
+                    <label for="precio">Rango de Precio:</label>
+                    <select id="precio" onchange="filtrarCanchas()">
+                        <option value="">Todos los precios</option>
+                        <option value="0-50">S/ 0 - S/ 50</option>
+                        <option value="50-100">S/ 50 - S/ 100</option>
+                        <option value="100-150">S/ 100 - S/ 150</option>
+                        <option value="150">S/ 150+</option>
+                    </select>
+                </div>
+
+                
+                <button class="btn-limpiar" onclick="limpiarFiltros()">Limpiar Filtros</button>
+            </div>
+
+            <!-- Galería de Canchas -->
+<div class="canchas-grid" id="canchesGrid">
+    <!-- Tarjeta 1 -->
+    <div class="cancha-card" data-ubicacion="norte" data-superficie="cesped" data-precio="120">
+        <div class="cancha-imagen">
+            <a href="https://maps.app.goo.gl/yrjiVN9TPq3Yjn6N8" target="_blank">
+                <img src="Imagenes/Coloso.jpg" alt="El Coloso Club V.C.">
+            </a>
+        </div>
+        <div class="cancha-info">
+            <h3>El Coloso Club V.C.</h3>
+            <div class="cancha-detalles">
+                <p><strong>📍 Ubicación:</strong> Zona Norte</p>
+                <p><strong>🌱 Superficie:</strong> Césped Natural</p>
+                <p><strong>💰 Precio:</strong> S/ 120/hora</p>
+                <p><strong>⭐ Calificación:</strong> ⭐⭐⭐⭐⭐ (4.8)</p>
+            </div>
+            <button class="btn-reservar">Reservar Ahora</button>
+        </div>
+    </div>
+
+    <!-- Tarjeta 2 -->
+    <div class="cancha-card" data-ubicacion="centro" data-superficie="sintetico" data-precio="80">
+        <div class="cancha-imagen">
+            <a href="https://maps.app.goo.gl/YWKZHyKVAsgbeZSs6" target="_blank">
+                <img src="Imagenes/Francisco.png" alt="FRANCISCO'S CLUB">
+            </a>
+        </div>
+        <div class="cancha-info">
+            <h3>FRANCISCO'S CLUB</h3>
+            <div class="cancha-detalles">
+                <p><strong>📍 Ubicación:</strong> Zona Centro</p>
+                <p><strong>🌱 Superficie:</strong> Césped Sintético</p>
+                <p><strong>💰 Precio:</strong> S/ 80/hora</p>
+                <p><strong>⭐ Calificación:</strong> ⭐⭐⭐⭐ (4.5)</p>
+            </div>
+            <button class="btn-reservar">Reservar Ahora</button>
+        </div>
+    </div>
+
+        <!-- Tarjeta 3 -->
+    <div class="cancha-card" data-ubicacion="sur" data-superficie="sintetico" data-precio="90">
+        <div class="cancha-imagen">
+            <a href="https://maps.app.goo.gl/mFvS3LyxkqA7yzRq5" target="_blank">
+                <img src="Imagenes/Nacional.webp" alt="Canchas Sinteticas El Nacional de la Dolores">
+            </a>
+        </div>
+        <div class="cancha-info">
+            <h3>Canchas Sinteticas El Nacional de la Dolores</h3>
+            <div class="cancha-detalles">
+                <p><strong>📍 Ubicación:</strong> Zona Sur - José Luis Bustamante y Rivero</p>
+                <p><strong>🌱 Superficie:</strong> Césped Sintético</p>
+                <p><strong>💰 Precio:</strong> S/ 90/hora</p>
+                <p><strong>⭐ Calificación:</strong> ⭐⭐⭐⭐⭐ (4.7)</p>
+            </div>
+            <button class="btn-reservar">Reservar Ahora</button>
+        </div>
+    </div>
+
+
+    <!-- Tarjeta 4 -->
+    <div class="cancha-card" data-ubicacion="este" data-superficie="cesped" data-precio="150">
+        <div class="cancha-imagen">
+            <a href="https://maps.app.goo.gl/VmaMoW7rvfpxJFAbA" target="_blank">
+                <img src="Imagenes/jarawa.png" alt="JARAWA SPORT S.A.C.">
+            </a>
+        </div>
+        <div class="cancha-info">
+            <h3>JARAWA SPORT S.A.C.</h3>
+            <div class="cancha-detalles">
+                <p><strong>📍 Ubicación:</strong> Zona Este</p>
+                <p><strong>🌱 Superficie:</strong> Césped Natural</p>
+                <p><strong>💰 Precio:</strong> S/ 150/hora</p>
+                <p><strong>⭐ Calificación:</strong> ⭐⭐⭐⭐⭐ (4.9)</p>
+            </div>
+            <button class="btn-reservar">Reservar Ahora</button>
+        </div>
+    </div>
+
+    <!-- Tarjeta 5 -->
+    <div class="cancha-card" data-ubicacion="oeste" data-superficie="asfalto" data-precio="60">
+        <div class="cancha-imagen">
+            <a href="https://maps.app.goo.gl/E6pH1dWj8ffsx5u18" target="_blank">
+                <img src="Imagenes/cancha-sintetica-arequipa.webp" alt="Canchas sintéticas Arequipa - Club Las Pampas">
+            </a>
+        </div>
+        <div class="cancha-info">
+            <h3>Canchas sintéticas Arequipa - Club Las Pampas</h3>
+            <div class="cancha-detalles">
+                <p><strong>📍 Ubicación:</strong> Zona Oeste</p>
+                <p><strong>🌱 Superficie:</strong> Asfalto</p>
+                <p><strong>💰 Precio:</strong> S/ 60/hora</p>
+                <p><strong>⭐ Calificación:</strong> ⭐⭐⭐⭐ (4.4)</p>
+            </div>
+            <button class="btn-reservar">Reservar Ahora</button>
+        </div>
+    </div>
+
+    <!-- Tarjeta 6 -->
+    <div class="cancha-card" data-ubicacion="norte" data-superficie="sintetico" data-precio="95">
+        <div class="cancha-imagen">
+            <a href="https://maps.app.goo.gl/1rEgYomdBF7oFurZ8" target="_blank">
+                <img src="Imagenes/el-clasico.webp" alt="El Clásico - Cancha Sintética">
+            </a>
+        </div>
+        <div class="cancha-info">
+            <h3>El Clásico - Cancha Sintética</h3>
+            <div class="cancha-detalles">
+                <p><strong>📍 Ubicación:</strong> Zona Norte</p>
+                <p><strong>🌱 Superficie:</strong> Césped Sintético</p>
+                <p><strong>💰 Precio:</strong> S/ 95/hora</p>
+                <p><strong>⭐ Calificación:</strong> ⭐⭐⭐⭐⭐ (4.6)</p>
+            </div>
+            <button class="btn-reservar">Reservar Ahora</button>
+        </div>
+    </div>
+
+    <!-- Tarjeta 7 -->
+    <div class="cancha-card" data-ubicacion="norte" data-superficie="sintetico" data-precio="95">
+        <div class="cancha-imagen">
+            <a href="https://maps.app.goo.gl/oX1TDMgonTscZUG68" target="_blank">
+                <img src="Imagenes/cancha-olympus.webp" alt="Olympus Tennis Camps">
+            </a>
+        </div>
+        <div class="cancha-info">
+            <h3>Olympus Tennis Camps</h3>
+            <div class="cancha-detalles">
+                <p><strong>📍 Ubicación:</strong> Zona Norte</p>
+                <p><strong>🌱 Superficie:</strong> Césped Sintético</p>
+                <p><strong>💰 Precio:</strong> S/ 95/hora</p>
+                <p><strong>⭐ Calificación:</strong> ⭐⭐⭐⭐⭐ (4.6)</p>
+            </div>
+            <button class="btn-reservar">Reservar Ahora</button>
+        </div>
+    </div>
+
+    <!-- Tarjeta 8 -->
+    <div class="cancha-card" data-ubicacion="norte" data-superficie="sintetico" data-precio="95">
+        <div class="cancha-imagen">
+            <a href="https://maps.app.goo.gl/ntssPJPm5PwQRrgEA" target="_blank">
+                <img src="Imagenes/el-golazo.webp" alt="Canchas sintéticas EL GOLAZO">
+            </a>
+        </div>
+        <div class="cancha-info">
+            <h3>Canchas sintéticas EL GOLAZO</h3>
+            <div class="cancha-detalles">
+                <p><strong>📍 Ubicación:</strong> Zona Norte</p>
+                <p><strong>🌱 Superficie:</strong> Césped Sintético</p>
+                <p><strong>💰 Precio:</strong> S/ 95/hora</p>
+                <p><strong>⭐ Calificación:</strong> ⭐⭐⭐⭐⭐ (4.6)</p>
+            </div>
+            <button class="btn-reservar">Reservar Ahora</button>
+        </div>
+    </div>
+
+    <!-- Tarjeta 9 -->
+    <div class="cancha-card" data-ubicacion="norte" data-superficie="sintetico" data-precio="95">
+        <div class="cancha-imagen">
+            <a href="https://maps.app.goo.gl/U6tt8erWcg43ucKe7" target="_blank">
+                <img src="Imagenes/Santiago.jpg" alt="Cancha Sintetica Santiago Bernabeu de Lanificio">
+            </a>
+        </div>
+        <div class="cancha-info">
+            <h3>Cancha Sintetica Santiago Bernabeu de Lanificio</h3>
+            <div class="cancha-detalles">
+                <p><strong>📍 Ubicación:</strong> Zona Norte</p>
+                <p><strong>🌱 Superficie:</strong> Césped Sintético</p>
+                <p><strong>💰 Precio:</strong> S/ 95/hora</p>
+                <p><strong>⭐ Calificación:</strong> ⭐⭐⭐⭐⭐ (4.6)</p>
+            </div>
+            <button class="btn-reservar">Reservar Ahora</button>
+        </div>
+    </div>
+</div>
+
+
+        <!-- Mensaje si no hay resultados -->
+        <div id="mensajeVacio" class="mensaje-vacio" style="display:none;">
+            <p>No se encontraron canchas con los filtros seleccionados.</p>
+        </div>
+
+        </div>
+    </section>
+
+        <!-- Footer --> 
+    <footer class="footer">
+        <div class="footer-container">
+            <!-- Información Principal -->
+            <div class="footer-info">
+                <h2 class="footer-logo">Reservas de Canchas Web</h2>
+                <p class="footer-description">
+                    Tu plataforma para reservar canchas deportivas fácilmente. 
+                    Conectamos deportistas con las mejores instalaciones deportivas de la ciudad.
+                </p>
+            </div>
+
+            <!-- Enlaces Rápidos -->
+            <div class="footer-section">
+                <h3>Enlaces Rápidos</h3>
+                <ul class="footer-links">
+                    <li><a href="index.html">Inicio</a></li>
+                    <li><a href="#canchas">Canchas</a></li>
+                    <li><a href="#reservas">Reservas</a></li>
+                    <li><a href="contactanos.html">Contacto</a></li>
+                    <li><a href="#terminos">Términos</a></li>
+                    <li><a href="#privacidad">Privacidad</a></li>
+                </ul>
+            </div>
+
+            <!-- Redes Sociales -->
+            <div class="footer-section">
+                <h3>Síguenos</h3>
+                <div class="social-links">
+                    <a href="#" class="social-link facebook" title="Facebook">
+                        📘
+                    </a>
+                    <a href="#" class="social-link instagram" title="Instagram">
+                        📷
+                    </a>
+                    <a href="#" class="social-link twitter" title="X/Twitter">
+                        🐦
+                    </a>
+                </div>
+            </div>
+
+            <!-- Información de Contacto -->
+            <div class="footer-section">
+                <h3>Contacto</h3>
+                <div class="contact-info">
+                    <div class="contact-item">
+                        <span class="contact-icon">✉️</span>
+                        <span>contacto@reservewebstadium.com</span>
+                    </div>
+                    <div class="contact-item">
+                        <span class="contact-icon">📞</span>
+                        <span>+51 987 654 321</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Línea de Copyright -->
+        <div class="footer-bottom">
+            <p>&copy; 2025 Reservas de Canchas Web. Todos los derechos reservados.</p>
+        </div>
+    </footer>
+
+    <script>
+        function filtrarCanchas() {
+            const ubicacion = document.getElementById('ubicacion').value;
+            const superficie = document.getElementById('superficie').value;
+            const precio = document.getElementById('precio').value;
+            const cards = document.querySelectorAll('.cancha-card');
+            let hayResultados = false;
+
+            cards.forEach(card => {
+                let mostrar = true;
+
+                if (ubicacion && card.getAttribute('data-ubicacion') !== ubicacion) {
+                    mostrar = false;
+                }
+
+                if (superficie && card.getAttribute('data-superficie') !== superficie) {
+                    mostrar = false;
+                }
+
+                if (precio) {
+                    const precioCard = parseInt(card.getAttribute('data-precio'));
+                    if (precio === '0-50' && (precioCard < 0 || precioCard > 50)) mostrar = false;
+                    if (precio === '50-100' && (precioCard < 50 || precioCard > 100)) mostrar = false;
+                    if (precio === '100-150' && (precioCard < 100 || precioCard > 150)) mostrar = false;
+                    if (precio === '150' && precioCard < 150) mostrar = false;
+                }
+
+                if (mostrar) {
+                    card.style.display = 'block';
+                    hayResultados = true;
+                } else {
+                    card.style.display = 'none';
+                }
+            });
+
+            document.getElementById('mensajeVacio').style.display = hayResultados ? 'none' : 'block';
+        }
+
+        function limpiarFiltros() {
+            document.getElementById('ubicacion').value = '';
+            document.getElementById('superficie').value = '';
+            document.getElementById('precio').value = '';
+            document.querySelectorAll('.cancha-card').forEach(card => {
+                card.style.display = 'block';
+            });
+            document.getElementById('mensajeVacio').style.display = 'none';
+        }
+    </script>
+</body>
+</html>
