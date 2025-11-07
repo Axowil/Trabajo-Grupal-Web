@@ -17,6 +17,7 @@
             <ul class="navbar-menu">
                 <li><a href="index.html">Inicio</a></li>
                 <li><a href="canchas.html">Canchas</a></li>
+                <li><a href="reserva.html">Reservar</a></li>
                 <li><a href="contactanos.html">Contacto</a></li>
                 <li><a href="sobreNosotros.html">Sobre Nosotros</a></li>
             </ul>
@@ -31,7 +32,7 @@
     <div class="hero-text-container">
         <form action="/formulario" method="POST" class="contact-form">
     <fieldset class="form-fieldset">
-        <legend class="form-legend">contactanos</legend>
+        <legend class="form-legend">Contáctanos</legend>
 
         <label for="nombres">Nombres:</label>
         <input type="text" id="nombres" name="nombres" required>
@@ -45,26 +46,13 @@
         <label for="telefono">Teléfono:</label>
         <input type="tel" id="telefono" name="telefono" required>
 
-        <label for="cancha">Seleccionar cancha:</label>
-        <select id="cancha" name="cancha" required>
-            <option value="" disabled selected>Seleccione una cancha</option>
-            <option value="El Coloso Club">El Coloso Club</option>
-            <option value="V.CFRANCISCO'S CLUB">V.CFRANCISCO'S CLUB</option>
-            <option value="Cancha Sintética San Siro">Cancha Sintética "San Siro"</option>
-            <option value="JARAWA SPORT S.A.C.">JARAWA SPORT S.A.C.</option>
-        </select>
+        <label for="asunto">Asunto:</label>
+        <input type="asunto" id="asunto" name="asunto" required>
 
-        <label for="fecha">Fecha:</label>
-        <input type="date" id="fecha" name="fecha" required>
-
-        <label for="personas">Número de personas:</label>
-        <input type="number" id="personas" name="personas" min="1" required>
-
-        <input type="submit" value="Enviar" class="submit-btn">
+        
     </fieldset>
-</form>
-
+    </form> 
     </div>
-</div>
 </body>
 </html>
+

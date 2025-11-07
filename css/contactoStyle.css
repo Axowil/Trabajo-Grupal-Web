@@ -49,6 +49,7 @@ width: 100%;
 .contact-form input[type="tel"],
 .contact-form input[type="date"],
 .contact-form input[type="number"],
+.contact-form input[type="asunto"],
 .contact-form select {
 width: 100%;
 padding: 0.8rem;
