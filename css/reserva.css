@@ -3,7 +3,7 @@ html, body { height: 100%; }
 body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; background: #f5f5f5; }
 
 h1{
-  padding-top: 100px;
+  padding-top: 60px;
 }
 
 /* Estilos del Navbar con temática de fútbol */
@@ -130,55 +130,201 @@ h1{
 
 /* Hero */
 .hero {
-  position: relative; min-height: 45vh;
+  position: relative; 
+  min-height: 45vh;
   background-image: url('https://user-gen-media-assets.s3.amazonaws.com/gemini_images/00a18584-2a6d-46c8-bf99-5025d2e2db26.png');
-  background-size: cover; background-position: center; background-attachment: fixed;
+  background-size: cover; 
+  background-position: center; 
+  background-attachment: fixed;
 }
-.hero-overlay { position:absolute; inset:0;
+
+.hero-overlay { 
+  position:absolute; 
+  inset:0;
   background: linear-gradient(135deg, rgba(56,176,0,.15) 0%, rgba(0,0,0,.1) 50%, rgba(56,176,0,.15) 100%);
 }
-.hero-inner { position:relative; z-index:1; max-width:1200px; margin:0 auto; padding: 70px 20px;
-  color:#fff; text-shadow: 1px 1px 6px rgba(0,0,0,.6);
+
+.hero-inner { 
+  position:relative; 
+  z-index:1; 
+  max-width:1200px; 
+  margin:0 auto;
+  padding: 70px 20px;
+  color:#fff; 
+  text-shadow: 1px 1px 6px rgba(0,0,0,.6);
 }
-.hero-inner h1 { font-size: 2.4rem; margin-bottom: .5rem; }
+
+.hero-inner h1 { 
+  font-size: 2.4rem;
+  margin-bottom: .5rem; 
+}
 
 /* Contenido */
-.wrapper { max-width: 1100px; margin: 30px auto; padding: 0 20px 40px; }
-.reserva-form { background:#fff; border-radius:14px; box-shadow:0 10px 25px rgba(0,0,0,.08); padding: 20px; }
-.fieldset { border: 1px solid #e5e7eb; border-radius:12px; padding: 18px; margin-bottom: 16px; }
-.fieldset > legend { color: #0a5f2b; font-weight: 700; padding: 0 6px; }
-.grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 14px; margin-top: 10px; }
-.field label { font-weight:600; display:block; margin-bottom:6px; }
+.wrapper { 
+  max-width: 1100px;
+  margin: 30px auto;
+  padding: 0 20px 40px; 
+}
+
+.reserva-form { 
+  background:#fff; 
+  border-radius:14px; 
+  box-shadow:0 10px 25px rgba(0,0,0,.08); 
+  padding: 20px; 
+}
+
+.fieldset { 
+  border: 1px solid #e5e7eb;
+  border-radius:12px; 
+  padding: 18px; 
+  margin-bottom: 16px;
+}
+
+.fieldset > legend { 
+  color: #0a5f2b; 
+  font-weight: 700; 
+  padding: 0 6px; 
+}
+
+.grid { 
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 14px; 
+  margin-top: 10px; 
+}
+
+.field label { 
+  font-weight:600;
+  display:block; 
+  margin-bottom:6px; 
+}
+
 .field input[type="date"], .field input[type="time"], .field input[type="text"], .field select {
-  width:100%; padding:.7rem; border:1px solid #ddd; border-radius:8px; background:#fff;
+  width:100%; 
+  padding:.7rem; 
+  border:1px solid #ddd; 
+  border-radius:8px; 
+  background:#fff;
 }
-.field input[readonly] { background: #f8fafb; }
+.field input[readonly] { 
+  background: #f8fafb; 
+}
 
-.acciones { display:flex; gap:10px; margin-top: 10px; }
+.acciones { 
+  display:flex; 
+  gap:10px; 
+  margin-top: 10px; 
+}
+
 .acciones button {
-  padding:.7rem 1rem; border:none; border-radius:8px; font-weight:700; cursor:pointer; background:#22c55e; color:#fff;
+  padding:.7rem 1rem; 
+  border:none; 
+  border-radius:8px; 
+  font-weight:700; 
+  cursor:pointer; 
+  background:#22c55e; 
+  color:#fff;
 }
-.acciones button:hover { background:#16a34a; }
 
-.estado { margin-top: 8px; font-weight:700; }
-.estado.si { color:#15803d; }
-.estado.no { color:#dc2626; }
+.acciones button:hover { 
+  background:#16a34a; 
+}
 
-.submitRow { display:flex; justify-content:flex-end; margin-top: 8px; }
-.btn-primary { background:#22c55e; color:#fff; border:none; border-radius:10px; padding:.8rem 1.2rem; font-weight:700; cursor:pointer; }
-.btn-primary:hover { background:#16a34a; }
+.estado { 
+  margin-top: 8px; 
+  font-weight:700; 
+}
+
+.estado.si { 
+  color:#15803d; 
+}
+
+.estado.no { 
+  color:#dc2626;
+}
+
+.submitRow { 
+  display:flex; 
+  justify-content:flex-end; 
+  margin-top: 8px;
+}
+
+.btn-primary { 
+  background:#22c55e;
+  color:#fff;
+  border:none;
+  border-radius:10px; 
+  padding:.8rem 1.2rem; 
+  font-weight:700; 
+  cursor:pointer; 
+}
+
+.btn-primary:hover { 
+  background:#16a34a;
+}
 
 /* Footer (coherente con tus otras páginas) */
-.footer { background: linear-gradient(135deg,#1a1a1a 0%,#2d2d2d 100%); color:#fff; padding: 40px 20px; margin-top: 30px; }
-.footer-container { max-width:1200px; margin:0 auto; display:grid; grid-template-columns:2fr 1fr 1fr 1fr; gap:40px; }
-.footer-logo { font-size: 24px; color:#4CAF50; font-weight:700; }
-.footer-links { list-style:none; display:flex; flex-direction:column; gap:10px; }
-.footer-links a { color:#ccc; text-decoration:none; }
-.footer-links a:hover { color:#4CAF50; }
-.social-links { display:flex; gap:12px; }
-.social-link { width:40px; height:40px; border-radius:50%; display:grid; place-items:center; text-decoration:none; color:#fff; background:rgba(255,255,255,.1); }
-.social-link:hover { background:#4CAF50; }
-.contact-info { display:flex; flex-direction:column; gap:10px; }
+.footer { 
+  background: linear-gradient(135deg,#1a1a1a 0%,#2d2d2d 100%);
+  color:#fff;
+  padding: 40px 20px;
+  margin-top: 30px;
+}
 
-/* Responsive navbar tweak */
+.footer-container { 
+  max-width:1200px;
+  margin:0 auto;
+  display:grid; 
+  grid-template-columns:2fr 1fr 1fr 1fr;
+  gap:40px;
+}
+
+.footer-logo { 
+  font-size: 24px;
+  color:#4CAF50;
+  font-weight:700;
+}
+
+.footer-links { 
+  list-style:none; 
+  display:flex; 
+  flex-direction:column; 
+  gap:10px; 
+}
+
+.footer-links a { 
+  color:#ccc; 
+  text-decoration:none; 
+}
+
+.footer-links a:hover { 
+  color:#4CAF50; 
+}
+
+.social-links { 
+  display:flex; 
+  gap:12px; 
+}
+
+.social-link { 
+  width:40px; 
+  height:40px; 
+  border-radius:50%; 
+  display:grid; 
+  place-items:center; 
+  text-decoration:none; 
+  color:#fff; 
+  background:rgba(255,255,255,.1); 
+}
+
+.social-link:hover { 
+  background:#4CAF50; 
+}
+
+.contact-info { 
+  display:flex; 
+  flex-direction:column; 
+  gap:10px;
+}
+
 @media (max-width: 968px) { .navbar-menu { display:none; } }
