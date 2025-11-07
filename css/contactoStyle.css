@@ -242,7 +242,8 @@ background-color: #0056b3;
     position: relative;
     display: flex;
     justify-content: center;
-    align-items: center;    
+    align-items: center;
+    padding-bottom: 80px;
 }
 .hero-text-container {
     width: 100%;
@@ -250,4 +251,5 @@ background-color: #0056b3;
     padding: 0 20px; 
     position: relative;
     z-index: 1;
+    text-align: left;
 }
