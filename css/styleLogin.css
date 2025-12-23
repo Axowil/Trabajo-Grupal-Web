@@ -210,4 +210,9 @@ button[type="submit"]:hover {
   color: var(--link-hover);
   text-decoration: underline;
 }
-
+#pelota {
+  filter: none;
+}
+body[data-theme="dark"] #pelota {
+  filter: invert(100%);
+}
