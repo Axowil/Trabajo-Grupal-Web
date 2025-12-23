@@ -246,10 +246,8 @@
             </div>
             <button class="btn-reservar">Reservar Ahora</button>
         </div>
+        </div>
     </div>
-</div>
-
-
         <!-- Mensaje si no hay resultados -->
         <div id="mensajeVacio" class="mensaje-vacio" style="display:none;">
             <p>No se encontraron canchas con los filtros seleccionados.</p>
@@ -257,6 +255,37 @@
 
         </div>
     </section>
+
+    <!-- ================= CHATBOT ================= -->
+    <button class="chatbot-fab" id="chatbotFab" aria-label="Abrir chatbot">💬</button>
+
+    <div class="chatbot-panel" id="chatbotPanel" aria-hidden="true">
+    <div class="chatbot-header">
+        <div class="chatbot-title">
+        <span class="chatbot-badge">Asistente</span>
+        <strong>Reservas</strong>
+        <small>Respuestas rápidas</small>
+        </div>
+        <div class="chatbot-actions">
+        <button class="chatbot-icon-btn" id="chatbotMin" title="Minimizar">—</button>
+        <button class="chatbot-icon-btn" id="chatbotClose" title="Cerrar">✕</button>
+        </div>
+    </div>
+
+    <div class="chatbot-body" id="chatbotMsgs"></div>
+
+    <div class="chatbot-chips">
+        <button class="chatbot-chip" data-q="Hola">Hola</button>
+        <button class="chatbot-chip" data-q="¿Cómo reservo una cancha?">¿Cómo reservo?</button>
+        <button class="chatbot-chip" data-q="¿Qué canchas hay?">¿Qué canchas hay?</button>
+        <button class="chatbot-chip" data-q="Horarios disponibles">Horarios</button>
+    </div>
+
+    <form class="chatbot-input" id="chatbotForm">
+        <input id="chatbotText" type="text" placeholder="Escribe tu mensaje..." autocomplete="off" />
+        <button type="submit">Enviar</button>
+    </form>
+    </div>
 
         <!-- Footer --> 
     <footer class="footer">
@@ -321,5 +350,6 @@
         </div>
     </footer>
 <script src="js/canchas.js"></script>
+<script src="/js/chatbot.js"></script>
 </body>
 </html>
