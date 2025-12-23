@@ -7,6 +7,15 @@
 </head>
 <body>
 
+  <button id="themeToggle" class="theme-btn" aria-label="Cambiar tema">
+  <svg class="icon sun-icon" width="24" height="24">
+    <use href="iconos/sun.svg"></use>
+  </svg>
+  <svg class="icon moon-icon" width="24" height="24">
+    <use href="iconos/moon.svg"></use>
+  </svg>
+</button>
+
   <div class="auth-container">
     <div class="auth-card">
       <img src="Imagenes/futbol.webp" alt="Logo" class="logo">
@@ -16,7 +25,6 @@
       <form>
         <input type="email" placeholder="Correo electrónico" required>
         <input type="password" placeholder="Contraseña" required>
-
         <button type="submit">Entrar</button>
       </form>
 
@@ -26,5 +34,6 @@
     </div>
   </div>
 
+  <script src="js/theme.js"></script>
 </body>
 </html>
