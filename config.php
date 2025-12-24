@@ -4,7 +4,7 @@ error_reporting(E_ALL);
 
 $host = "sql308.infinityfree.com";
 $user = "if0_40752334";
-$pass = "TU_PASSWORD_DE_VPANEL";
+$pass = "Gi1A0gk4ZC";
 $db   = "if0_40752334_futbol_web";
 
 $conn = new mysqli($host, $user, $pass, $db);
