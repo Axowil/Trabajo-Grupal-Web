@@ -13,9 +13,24 @@
       <h2>Iniciar Sesión</h2>
       <a href="index.html" class="btn-volver">← Volver</a>
 
-      <form>
-        <input type="email" placeholder="Correo electrónico" required>
-        <input type="password" placeholder="Contraseña" required>
+      <!-- 
+        FORMULARIO DE LOGIN
+        - action="login.php": envía los datos al backend en PHP
+        - method="POST": los datos no viajan por la URL
+      -->
+      <form action="login.php" method="POST">
+
+        <!-- 
+          Campo Email:
+          - name="email" permite que PHP identifique el correo ingresado
+        -->
+        <input type="email" name="email" placeholder="Correo electrónico" required>
+
+        <!-- 
+          Campo Contraseña:
+          - name="password" permite que PHP valide la contraseña
+        -->
+        <input type="password" name="password" placeholder="Contraseña" required>
 
         <button type="submit">Entrar</button>
       </form>

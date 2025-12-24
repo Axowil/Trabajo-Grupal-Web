@@ -12,18 +12,47 @@
       <img src="Imagenes/futbol.webp" alt="Logo" class="logo">
 
       <h2>Crear Cuenta</h2>
-        <a href="index.html" class="btn-volver">← Volver</a>
-      <form>
-        <input type="text" placeholder="Nombre completo" required>
-        <input type="email" placeholder="Correo electrónico" required>
-        <input type="password" placeholder="Contraseña" required>
-        <input type="password" placeholder="Confirmar contraseña" required>
+      <a href="index.html" class="btn-volver">← Volver</a>
+
+      <!-- 
+        FORMULARIO DE REGISTRO
+        - Se agregó action="registro.php" para enviar los datos al backend en PHP
+        - Se agregó method="POST" para enviar los datos de forma segura
+      -->
+      <form action="registro.php" method="POST">
+
+        <!-- 
+          Campo Nombre:
+          - Se agregó name="nombre" para que PHP pueda leer el valor si se necesita en el futuro
+          - Actualmente NO se guarda en la base de datos
+        -->
+        <input type="text" name="nombre" placeholder="Nombre completo" required>
+
+        <!-- 
+          Campo Email:
+          - name="email" es obligatorio para que PHP pueda guardar el correo en MySQL
+        -->
+        <input type="email" name="email" placeholder="Correo electrónico" required>
+
+        <!-- 
+          Campo Contraseña:
+          - name="password" permite que PHP reciba la contraseña
+          - En el backend se encripta antes de guardarse
+        -->
+        <input type="password" name="password" placeholder="Contraseña" required>
+
+        <!-- 
+          Campo Confirmar Contraseña:
+          - Se mantiene solo para validación visual
+          - No se envía a la base de datos
+        -->
+        <input type="password" name="confirmar" placeholder="Confirmar contraseña" required>
 
         <button type="submit">Registrarse</button>
       </form>
 
       <p class="auth-link">
-        ¿Ya tienes cuenta? <a href="login.html">Inicia sesion</a>
+        ¿Ya tienes cuenta? <a href="login.html">Inicia sesión</a>
       </p>
     </div>
   </div>
