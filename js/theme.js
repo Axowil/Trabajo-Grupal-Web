@@ -38,3 +38,26 @@ window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', fun
     applyTheme(e.matches ? 'dark' : 'light');
   }
 });
+
+  // Detectar errores desde URL
+  const urlParams = new URLSearchParams(window.location.search);
+  const error = urlParams.get('error');
+
+  if (error === 'password') {
+    document.getElementById('password').classList.add('error');
+    document.getElementById('passwordError').classList.add('show');
+  } else if (error === 'user') {
+    document.getElementById('email').classList.add('error');
+    document.getElementById('emailError').classList.add('show');
+  }
+
+  // Limpiar errores al escribir
+  document.getElementById('email').addEventListener('input', function() {
+    this.classList.remove('error');
+    document.getElementById('emailError').classList.remove('show');
+  });
+
+  document.getElementById('password').addEventListener('input', function() {
+    this.classList.remove('error');
+    document.getElementById('passwordError').classList.remove('show');
+  });

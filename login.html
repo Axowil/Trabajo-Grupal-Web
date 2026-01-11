@@ -28,20 +28,18 @@
         - method="POST": los datos no viajan por la URL
       -->
       <form action="login.php" method="POST">
+        
+  <div class="input-group">
+    <input type="email" name="email" id="email" placeholder="Correo electrónico" required>
+    <div class="error-message" id="emailError">El usuario no existe</div>
+  </div>
 
-        <!-- 
-          Campo Email:
-          - name="email" permite que PHP identifique el correo ingresado
-        -->
-        <input type="email" name="email" placeholder="Correo electrónico" required>
+  <div class="input-group">
+    <input type="password" name="password" id="password" placeholder="Contraseña" required>
+    <div class="error-message" id="passwordError">Contraseña incorrecta</div>
+  </div>
 
-        <!-- 
-          Campo Contraseña:
-          - name="password" permite que PHP valide la contraseña
-        -->
-        <input type="password" name="password" placeholder="Contraseña" required>
-
-        <button type="submit">Entrar</button>
+  <button type="submit">Entrar</button>
       </form>
 
       <p class="auth-link">

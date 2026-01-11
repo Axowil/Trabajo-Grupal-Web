@@ -28,7 +28,7 @@ if ($row = $result->fetch_assoc()) {
     // Se compara la contraseña ingresada con la encriptada en la BD
     if (password_verify($password, $row['password'])) {
         
-        // ✅ Si es correcta, se guarda el id del usuario en sesión
+        // Si es correcta, se guarda el id del usuario en sesión
         $_SESSION['usuario'] = $row['id'];
         
         // Se redirige al inicio
@@ -36,13 +36,13 @@ if ($row = $result->fetch_assoc()) {
         exit;
         
     } else {
-        //  Contraseña incorrecta - REDIRIGE al login con parámetro de error
+        //  Contraseña incorrecta
         header("Location: login.html?error=password");
         exit;
     }
     
 } else {
-    //  Usuario no encontrado - REDIRIGE al login con parámetro de error
+    //  Usuario no encontrado
     header("Location: login.html?error=user");
     exit;
 }
