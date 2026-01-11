@@ -8,27 +8,7 @@
     <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
-    <!-- Navbar -->
-    <nav class="navbar">
-        <div class="navbar-container">
-            <div class="navbar-logo">
-                <a href="index.html">
-                    <img src="Imagenes/futbol.webp" alt="Logo Fútbol" class="logo-img">
-                </a>
-            </div>
-            <ul class="navbar-menu">
-                <li><a href="index.html">Inicio</a></li>
-                <li><a href="canchas.html">Canchas</a></li>
-                <li><a href="reserva.php">Reservar</a></li>
-                <li><a href="contactanos.html">Contacto</a></li>
-                <li><a href="sobreNosotros.html">Sobre Nosotros</a></li>
-            </ul>
-            <div class="navbar-buttons">
-                <a href="login.html" class="btn-login">Iniciar Sesión</a>
-                <a href="register.html" class="btn-registro">Registrarse</a>
-            </div>
-        </div>
-    </nav>
+       <?php include 'navbar.php'; ?>
 
     <!-- Sección Principal -->
     <section class="canchas-section">
@@ -355,6 +335,6 @@
         </div>
     </footer>
 <script src="js/canchas.js"></script>
-<script src="js/chatbot.js"></script>
+<script src="js/asistente.js"></script>
 </body>
 </html>

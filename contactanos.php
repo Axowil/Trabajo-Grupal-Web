@@ -8,26 +8,8 @@
     <link rel="stylesheet" href="css/contactoStyle.css">
 </head>
 <body>
-    <nav class="navbar">
-        <div class="navbar-container">
-            <div class="navbar-logo">
-                <a href="#">
-                    <img src="Imagenes/futbol.webp" alt="Logo Fútbol" class="logo-img">
-                </a>
-            </div>
-            <ul class="navbar-menu">
-                <li><a href="index.html">Inicio</a></li>
-                <li><a href="canchas.html">Canchas</a></li>
-                <li><a href="reserva.php">Reservar</a></li>
-                <li><a href="contactanos.html">Contacto</a></li>
-                <li><a href="sobreNosotros.html">Sobre Nosotros</a></li>
-            </ul>
-            <div class="navbar-buttons">
-                <a href="login.html" class="btn-login">Iniciar Sesión</a>
-                <a href="register.html" class="btn-registro">Registrarse</a>
-            </div>
-        </div>
-    </nav>
+       <?php include 'navbar.php'; ?>
+
     <div class="hero-section">
         <div class="hero-overlay"></div>
         <div class="hero-text-container">

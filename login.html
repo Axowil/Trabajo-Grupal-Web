@@ -20,7 +20,7 @@
     <div class="auth-card">
       <img src="Imagenes/futbol.webp" alt="Logo" class="logo" id="pelota">
       <h2>Iniciar Sesión</h2>
-      <a href="index.html" class="btn-volver">← Volver</a>
+      <a href="/index.php" class="btn-volver">← Volver</a>
 
       <!-- 
         FORMULARIO DE LOGIN
@@ -28,22 +28,24 @@
         - method="POST": los datos no viajan por la URL
       -->
       <form action="login.php" method="POST">
-        
-  <div class="input-group">
-    <input type="email" name="email" id="email" placeholder="Correo electrónico" required>
-    <div class="error-message" id="emailError">El usuario no existe</div>
-  </div>
 
-  <div class="input-group">
-    <input type="password" name="password" id="password" placeholder="Contraseña" required>
-    <div class="error-message" id="passwordError">Contraseña incorrecta</div>
-  </div>
+        <!-- 
+          Campo Email:
+          - name="email" permite que PHP identifique el correo ingresado
+        -->
+        <input type="email" name="email" placeholder="Correo electrónico" required>
 
-  <button type="submit">Entrar</button>
+        <!-- 
+          Campo Contraseña:
+          - name="password" permite que PHP valide la contraseña
+        -->
+        <input type="password" name="password" placeholder="Contraseña" required>
+
+        <button type="submit">Entrar</button>
       </form>
 
       <p class="auth-link">
-        ¿No tienes cuenta? <a href="register.html">Regístrate</a>
+        ¿No tienes cuenta? <a href="registro.html">Regístrate</a>
       </p>
     </div>
   </div>

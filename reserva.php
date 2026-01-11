@@ -12,10 +12,6 @@ if (!isset($_SESSION['usuario'])) {
 }
 ?>
 
-
-
-
-
 <!DOCTYPE html>
 <html lang="es">
 <head>
@@ -26,27 +22,8 @@ if (!isset($_SESSION['usuario'])) {
   <link rel="stylesheet" href="css/reserva.css">
 </head>
 <body>
-  <!-- Navbar con temática de fútbol -->
-    <nav class="navbar">
-        <div class="navbar-container">
-            <div class="navbar-logo">
-                <a href="#">
-                    <img src="Imagenes/futbol.webp" alt="Logo Fútbol" class="logo-img">
-                </a>
-            </div>
-            <ul class="navbar-menu">
-                <li><a href="index.html">Inicio</a></li>
-                <li><a href="canchas.html">Canchas</a></li>
-                <li><a href="reserva.html">Reservar</a></li>
-                <li><a href="contactanos.html">Contacto</a></li>
-                <li><a href="sobreNosotros.html">Sobre Nosotros</a></li>
-            </ul>
-            <div class="navbar-buttons">
-                <a href="login.html" class="btn-login">Iniciar Sesión</a>
-                <a href="register.html" class="btn-registro">Registrarse</a>
-            </div>
-        </div>
-    </nav>
+  <!-- Incluir navbar dinámico -->
+  <?php include 'navbar.php'; ?>
 
   <header class="hero">
     <div class="hero-overlay"></div>
@@ -132,31 +109,31 @@ if (!isset($_SESSION['usuario'])) {
   <button class="chatbot-fab" id="chatbotFab" aria-label="Abrir chatbot">🤖</button>
 
   <div class="chatbot-panel" id="chatbotPanel" aria-hidden="true">
-  <div class="chatbot-header">
+    <div class="chatbot-header">
       <div class="chatbot-title">
-      <span class="chatbot-badge">Asistente</span>
-      <strong>Reservas</strong>
-      <small>Respuestas rápidas</small>
+        <span class="chatbot-badge">Asistente</span>
+        <strong>Reservas</strong>
+        <small>Respuestas rápidas</small>
       </div>
       <div class="chatbot-actions">
-      <button class="chatbot-icon-btn" id="chatbotMin" title="Minimizar">—</button>
-      <button class="chatbot-icon-btn" id="chatbotClose" title="Cerrar">✕</button>
+        <button class="chatbot-icon-btn" id="chatbotMin" title="Minimizar">—</button>
+        <button class="chatbot-icon-btn" id="chatbotClose" title="Cerrar">✕</button>
       </div>
-  </div>
+    </div>
 
-  <div class="chatbot-body" id="chatbotMsgs"></div>
+    <div class="chatbot-body" id="chatbotMsgs"></div>
 
-  <div class="chatbot-chips">
+    <div class="chatbot-chips">
       <button class="chatbot-chip" data-q="Hola">Hola</button>
       <button class="chatbot-chip" data-q="¿Cómo reservo una cancha?">¿Cómo reservo?</button>
       <button class="chatbot-chip" data-q="¿Qué canchas hay?">¿Qué canchas hay?</button>
       <button class="chatbot-chip" data-q="Horarios disponibles">Horarios</button>
-  </div>
+    </div>
 
-  <form class="chatbot-input" id="chatbotForm">
+    <form class="chatbot-input" id="chatbotForm">
       <input id="chatbotText" type="text" placeholder="Escribe tu mensaje..." autocomplete="off" />
       <button type="submit">Enviar</button>
-  </form>
+    </form>
   </div>
   
   <footer class="footer">
@@ -172,29 +149,29 @@ if (!isset($_SESSION['usuario'])) {
       <div class="footer-section">
         <h3>Enlaces Rápidos</h3>
         <ul class="footer-links">
-          <li><a href="index.html">Inicio</a></li>
-          <li><a href="canchas.html">Canchas</a></li>
-          <li><a href="reserva.html">Reservar</a></li>
-          <li><a href="contactanos.html">Contacto</a></li>
+          <li><a href="index.php">Inicio</a></li>
+          <li><a href="canchas.php">Canchas</a></li>
+          <li><a href="reserva.php">Reservar</a></li>
+          <li><a href="contactanos.php">Contacto</a></li>
           <li><a href="#terminos">Términos</a></li>
           <li><a href="#privacidad">Privacidad</a></li>
         </ul>
       </div>
 
       <div class="footer-section">
-            <h3>Síguenos</h3>
-            <div class="social-links">
-                <a href="#" class="social-link facebook" title="Facebook">
-                    <img src="iconos/facebook.svg" alt="Facebook" width="24" height="24">
-                </a>
-                <a href="#" class="social-link instagram" title="Instagram">
-                    <img src="iconos/instagram.svg" alt="Instagram" width="24" height="24">
-                </a>
-                <a href="#" class="social-link twitter" title="X/Twitter">
-                    <img src="iconos/twitter.svg" alt="Twitter" width="24" height="24">
-                </a>
-            </div>
+        <h3>Síguenos</h3>
+        <div class="social-links">
+          <a href="#" class="social-link facebook" title="Facebook">
+            <img src="iconos/facebook.svg" alt="Facebook" width="24" height="24">
+          </a>
+          <a href="#" class="social-link instagram" title="Instagram">
+            <img src="iconos/instagram.svg" alt="Instagram" width="24" height="24">
+          </a>
+          <a href="#" class="social-link twitter" title="X/Twitter">
+            <img src="iconos/twitter.svg" alt="Twitter" width="24" height="24">
+          </a>
         </div>
+      </div>
 
       <div class="footer-section">
         <h3>Contacto</h3>
@@ -220,6 +197,6 @@ if (!isset($_SESSION['usuario'])) {
     </div>
   </footer>
   <script src="js/reserva.js"></script>
-  <script src="js/chatbot.js"></script>
+  <script src="js/asistente.js"></script>
 </body>
 </html>
